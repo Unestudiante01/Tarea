@@ -1,0 +1,26 @@
+meme_dict = {
+    "LOL": "Una respuesta a algo gracioso",
+    "CRINGE": "Algo excepcionalmente raro o embarazoso",
+    "ROFL": "Una respuesta a una broma",
+    "SHEESH": "Ligera desaprobación",
+    "CREEPY": "Aterrador, siniestro",
+    "AGGRO": "Ponerse agresivo/enojado"
+}
+def buscar_palabra(diccionario, palabra):
+    if palabra in diccionario:
+        return diccionario[palabra]
+    else:
+        return "Lo siento, no conozco esa palabra."
+def main():
+    print("¡Bienvenido al diccionario de palabras modernas!")
+    print("Escribe una palabra en mayúsculas para obtener su significado.")
+    print("Puedes preguntar por hasta 5 palabras.")
+
+    for i in range(5):
+        word = input("Escribe una palabra que no entiendas (¡con mayúsculas!): ")
+        significado = buscar_palabra(meme_dict, word)
+        print(significado)
+    print("¡Gracias por usar el diccionario!")
+
+if __name__ == "__main__":
+    main()
